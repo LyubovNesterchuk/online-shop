@@ -2,21 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/js-module-11-12/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/online-shop/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wishlist</title>
-    <script type="module" crossorigin src="/js-module-11-12/wishlist.js"></script>
-    <link rel="modulepreload" crossorigin href="/js-module-11-12/assets/vendor-Br9p5nBn.js">
-    <link rel="modulepreload" crossorigin href="/js-module-11-12/assets/helpers-DDQDsabU.js">
-    <link rel="stylesheet" crossorigin href="/js-module-11-12/assets/helpers-CA3LL4sn.css">
-    <link rel="stylesheet" crossorigin href="/js-module-11-12/assets/vendor-BIHqh4r3.css">
+    <title>Cart</title>
+    <script type="module" crossorigin src="/online-shop/cart.js"></script>
+    <link rel="modulepreload" crossorigin href="/online-shop/assets/vendor-Br9p5nBn.js">
+    <link rel="modulepreload" crossorigin href="/online-shop/assets/helpers-DDQDsabU.js">
+    <link rel="stylesheet" crossorigin href="/online-shop/assets/helpers-CA3LL4sn.css">
+    <link rel="stylesheet" crossorigin href="/online-shop/assets/vendor-BIHqh4r3.css">
   </head>
   <body>
     <header class="header">
   <div class="container header__container">
     <a class="logo" href="./index.html" aria-label="Site logo">
       <svg class="logo__icon" width="100" height="30">
-        <use href="/js-module-11-12/assets/sprite-BnPQ37u_.svg#logo"></use>
+        <use href="/online-shop/assets/sprite-BnPQ37u_.svg#logo"></use>
       </svg>
     </a>
 
@@ -43,13 +43,13 @@
           <a class="nav__link {=$highlight-home}" href="./index.html">Home</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link {=$highlight-cart}" href="./cart.html">
+          <a class="nav__link nav__link--active" href="./cart.html">
             Cart
             <span class="nav__count" data-cart-count>0</span>
           </a>
         </li>
         <li class="nav__item">
-          <a class="nav__link nav__link--active" href="./wishlist.html">
+          <a class="nav__link {=$highlight-wishlist}" href="./wishlist.html">
             Wishlist
             <span class="nav__count" data-wishlist-count>0</span>
           </a>
@@ -62,10 +62,9 @@
   </div>
 </header>
 
-
-    <main>
-      <section class="section">
-        <div class="container">
+    <section class="section">
+      <div class="container product-page">
+        <main>
           <ul class="products"></ul>
           <div class="not-found">
             <div class="not-found__icon">
@@ -90,9 +89,38 @@
               different keywords.
             </p>
           </div>
-        </div>
-      </section>
-    </main>
+        </main>
+
+        <aside class="sidebar">
+          <div class="cart-summary">
+            <div class="cart-summary__inner">
+              <h2 class="cart-summary__title">Order Summary</h2>
+
+              <ul class="cart-summary__list">
+                <li class="cart-summary__item">
+                  <span class="cart-summary__label">Items:</span>
+                  <span class="cart-summary__value" data-count>0</span>
+                </li>
+                <li class="cart-summary__item">
+                  <span class="cart-summary__label">Total:</span>
+                  <span class="cart-summary__value" data-price>$0</span>
+                </li>
+                <li class="cart-summary__item">
+                  <span class="cart-summary__label">Shipping:</span>
+                  <span class="cart-summary__value">Free</span>
+                </li>
+              </ul>
+
+              <div class="cart-summary__promo">
+                <p class="cart-summary__hint">Apply promo code at checkout</p>
+              </div>
+
+              <button class="cart-summary__btn">Buy products</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
     <div class="modal">
   <div class="modal__content">
     <button class="modal__close-btn" type="button"></button>
