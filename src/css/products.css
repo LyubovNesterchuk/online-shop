@@ -115,29 +115,32 @@
   gap: 8px;
   justify-content: center;
   align-items: center;
-  margin-top: 24px;
+  margin-top: 40px;
 }
 
-.tui-page-btn {
-    background-color: #f0f0f0;
-      border: 1px solid #ccc;
-      padding: 5px 10px;
-      cursor: pointer;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-      text-transform: capitalize;
-      color: #e05a00;
+.tui-pagination .tui-page-btn {
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  min-width: 36px;
+  height: 36px;
 }
 
-.tui-page-btn:hover {
-  background-color: #ddd;
+.tui-pagination .tui-first,
+.tui-pagination .tui-prev,
+.tui-pagination .tui-next,
+.tui-pagination .tui-last {
+  background-color: #e05a00;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: #e05a00;
 }
 
 .product-quantity{
-    display: flex;
-
-      gap: 4px;
-      margin-top: 8px;
+  display: flex;
+  gap: 4px;
+  margin-top: 8px;
 }
 
 .quantity-button {
