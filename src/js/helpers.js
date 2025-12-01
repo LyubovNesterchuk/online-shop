@@ -3,7 +3,8 @@ import { refs } from './refs.js';
 import { fetchProducts, fetchProductsByCategory } from './products-api.js';
 import { renderProducts } from './render-functions.js';
 import iziToast from 'izitoast';
-import Pagination from 'tui-pagination';
+import Pagination from "tui-pagination";
+import 'tui-pagination/dist/tui-pagination.css';
 
 let currentPage = 1;
 const limit = 12;
